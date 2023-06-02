@@ -47,7 +47,7 @@ ENV \
 COPY --from=builder /install /usr/local
 COPY docker-entrypoint.sh /
 COPY docker-cmd.sh /
-COPY $PROJECT_NAME $DJANGO_BASE_DIR
+COPY src $DJANGO_BASE_DIR
 
 # User
 RUN chmod +x /docker-entrypoint.sh /docker-cmd.sh && \
